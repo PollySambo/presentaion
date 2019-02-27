@@ -16,6 +16,8 @@
 # **DATA WAREHOUSE CONCEPTS**
 ![](/../images/datawareus.jpg)
 
+A data warehouse is a centralised store of data from the transactional and operational systems used by the various departments of an organisation to process their day-to-day activities. 
+
 ## **__what is a data warehouse?__**
 ![](/../images/data-warehouse.jpg)
 
