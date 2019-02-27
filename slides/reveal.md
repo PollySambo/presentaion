@@ -2,6 +2,17 @@
 (importance of good decisions)
 ![](../images/family_cutting_tree.jpg)
 
+## TABLE OF CONTENT
+  
+- What is Data Warehousing and some of the benefits
+- ETL functions
+- Data Lineage
+- Temporal Date
+- Apache Camel Enterprise Intergration Patterns
+- Dimension Model
+   - Facts
+   - Dimension
+
 # **DATA WAREHOUSE CONCEPTS**
 ![](/../images/datawareus.jpg)
 
@@ -12,9 +23,7 @@ A data warehouse is a centralised store of data from the transactional and opera
 
 ## benefits of a data warehouse
 ![](/../images/5-benefits-of-the-data-warehouse.png)
-- Data integration   
-
-
+  
 - Manage risk 
 
 
@@ -40,45 +49,67 @@ A data warehouse is a centralised store of data from the transactional and opera
 ## __Data Lineage__
 ![](/../images/data_lineage.png)
 
-Trusting Big Data requires understanding its Data Lineage. Without Data Lineage, Big Data becomes synonymous with the last phrase in a game of telephone. 
-Data Lineage describes data origins, movements, characteristics, and quality.
+- Data Lineage describes data origins, movements, characteristics, and quality over time
+- Simplifies tracing errors back to their sources
+- Trusting Big Data requires understanding its Data Lineage
+
 
 ## __Temporal Data__
-![](/../images/dataWarehouse.jpg)
 
-what is Temporal data?
+- A temporal database stores data relating to time instances.
+- It offers temporal data types and stores information relating to past, present and future time. The temporal database has two major  attributes. 
+    - valid time. 
+    - transaction time. 
+- More specifically the temporal aspects usually include valid time and transaction time. 
+- These attributes can be combined to form bitemporal data.
 
-Temporal data is simply data that represents a state in time.
-A temporal database is a database that has certain features that support time-sensitive status for entries. 
-
-
-
-## __What is Apache Camel?__
-![](/../images/Apache-camel-logo.png)
-
-Apache Camel is a powerful open source integration platform based on Enterprise Integration Patterns (EIP) with powerful Bean Integration. Camel lets you implementing EIP routing using Camels intuitive Domain Specific Language (DSL)based on Java (aka fluent builder) or XML. Camel uses URI for endpoint resolution so its very easy to work with any kind of transport such as HTTP, REST, JMS, web service, File, FTP, TCP,Mail, JBI, Bean (POJO) and many others.
-
+## __example__
+![](/../images/temporal_data example.PNG)
 
 ## enterprise integration patterns slide
-![](/)
+![](/../images/Enterprise_integration.png)
 
-## facts and dimensions slide
-![]()
+- Need for combining different programs
+- APIs/libraries to consolidate data/programs
+- Need for real-time processing
 
-one of the attributes of a Dimentional Model is that it contains
-facts and dimensions 
+## Apache Camel
+![](/../images/Apache-camel-logo.png)
 
-what is fact?
-
-- table containing measurements
-- grain defined by related dimensions
-- usually additive, but not always
-- resolves many-to-many relationships
+- Open Source intergration framework based on Enterprise Intergration Patterns (EIP)
+- Lets you implement EIP routing
+- Translates a message type/format into another e.g XML into JSON
 
 
+## __DIMENSIONAL MODEL__
 
-## last slide
+A dimensional model is a data structure technique optimized for Data warehousing tools. The concept of Dimensional Modelling was developed by Ralph Kimball and is comprised of "fact" and "dimension" tables.
 
-> with a quote to go.
+## _facts_
 
-my notes on 
+
+A fact table is a primary table in a dimensional model.
+Facts are the measurements/metrics or facts from your business process. For a Sales business process, a measurement would be quarterly sales number
+
+**A Fact Table contains**
+
+- Measurements/facts
+
+- Foreign key to dimension table
+
+## _DIMENSION_
+
+**Dimension**
+ provides the context surrounding a business process event. In simple terms, they give who, what, where of a fact. In the Sales business process, for the fact quarterly sales number, dimensions would be
+
+- Who  __ Customer Names
+- Where __ Location
+- What __ Product Name
+
+
+
+## EXAMPLE
+![](/../images/example_dimensional_model.PNG) 
+
+##  __Questions__
+![](/../images/questions.PNG)
